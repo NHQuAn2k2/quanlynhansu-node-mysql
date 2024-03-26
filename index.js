@@ -6,7 +6,7 @@ const mysql = require("mysql2");
 const port = 3001;
 const whitelist = [
   "http://localhost:3000",
-  "https://quanlynhansu-reactjs.onrender.com",
+  "https://quanlynhansu-reactjs.vercel.app",
 ];
 app.use(
   cors({
