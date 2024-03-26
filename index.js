@@ -4,7 +4,12 @@ const app = express();
 const jwt = require("jsonwebtoken");
 const mysql = require("mysql2");
 const port = 3001;
-app.use(cors(), express.json());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
+app.options("*", cors());
 // mysql------------------------------
 const con = mysql.createConnection({
   host: "bi9vhv5gpr53ceiwuu48-mysql.services.clever-cloud.com",
