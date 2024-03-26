@@ -6,7 +6,7 @@ const mysql = require("mysql2");
 const port = 3001;
 app.use(
   cors({
-    origin: "localhost:3000",
+    origin: "http://localhost:3000",
     headers: ["Content-Type"],
     credentials: true,
   })
