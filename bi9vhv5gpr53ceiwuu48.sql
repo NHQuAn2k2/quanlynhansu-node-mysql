@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `quanlynhansu`
+-- Cơ sở dữ liệu: `bi9vhv5gpr53ceiwuu48`
 --
 
 -- --------------------------------------------------------

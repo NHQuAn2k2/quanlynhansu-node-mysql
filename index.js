@@ -7,10 +7,10 @@ const port = 3001;
 app.use(cors(), express.json());
 // mysql------------------------------
 const con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "quanlynhansu",
+  host: "bi9vhv5gpr53ceiwuu48-mysql.services.clever-cloud.com",
+  user: "uutl2kjelgf4xtrg",
+  password: "vxJVtLyeSGj818bupHME",
+  database: "bi9vhv5gpr53ceiwuu48",
 });
 con.connect(function (err) {
   if (err) throw err;
