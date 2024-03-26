@@ -4,7 +4,10 @@ const app = express();
 const jwt = require("jsonwebtoken");
 const mysql = require("mysql2");
 const port = 3001;
-const whitelist = ["http://localhost:3000"];
+const whitelist = [
+  "http://localhost:3000",
+  "https://quanlynhansu-reactjs.onrender.com",
+];
 app.use(
   cors({
     origin: function (origin, callback) {
