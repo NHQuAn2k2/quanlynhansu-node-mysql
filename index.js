@@ -5,6 +5,10 @@ const jwt = require("jsonwebtoken");
 const mysql = require("mysql2");
 const port = 3001;
 app.use(cors(), express.json());
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  next();
+});
 // mysql------------------------------
 const con = mysql.createConnection({
   host: "bi9vhv5gpr53ceiwuu48-mysql.services.clever-cloud.com",
