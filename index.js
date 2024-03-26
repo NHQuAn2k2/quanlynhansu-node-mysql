@@ -4,11 +4,19 @@ const app = express();
 const jwt = require("jsonwebtoken");
 const mysql = require("mysql2");
 const port = 3001;
-app.use(cors(), express.json());
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  next();
-});
+const whitelist = ["http://localhost:3000"];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
+app.use(express.json());
 // mysql------------------------------
 const con = mysql.createConnection({
   host: "bi9vhv5gpr53ceiwuu48-mysql.services.clever-cloud.com",
