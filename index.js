@@ -30,7 +30,10 @@ const con = mysql.createConnection({
   database: "bi9vhv5gpr53ceiwuu48",
 });
 con.connect((err) => {
-  if (err) throw err;
+  if (err) {
+    console.log(err);
+    throw err;
+  }
   console.log("Connected!");
 });
 //-------------------------------------
